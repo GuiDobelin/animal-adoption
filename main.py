@@ -5,3 +5,8 @@ class Animal:
         self.cor = cor
         self.porte = porte
         self.particularidade = particularidade
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None

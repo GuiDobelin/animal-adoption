@@ -38,3 +38,6 @@ class Fila:
         if self.vazia():
             return None
         return self.items.pop(0)
+    
+    def tamanho(self):
+        return len(self.items)

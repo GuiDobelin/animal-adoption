@@ -45,3 +45,9 @@ class Fila:
 class Pilha:
     def __init__(self):
         self.items = []
+
+    def vazia(self):
+        return len(self.items) == 0
+
+    def Salva(self, item):
+        self.items.append(item)

@@ -41,3 +41,7 @@ class Fila:
     
     def tamanho(self):
         return len(self.items)
+
+class Pilha:
+    def __init__(self):
+        self.items = []

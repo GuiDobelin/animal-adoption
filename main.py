@@ -24,3 +24,9 @@ class LinkedList:
             while current.next:
                 current = current.next
             current.next = new_node
+class Fila:
+    def __init__(self):
+        self.items = []
+
+    def vazia(self):
+        return len(self.items) == 0

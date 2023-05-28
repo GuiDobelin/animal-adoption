@@ -30,3 +30,11 @@ class Fila:
 
     def vazia(self):
         return len(self.items) == 0
+    
+    def enfileirar(self, item):
+        self.items.append(item)
+
+    def desenfileirar(self):
+        if self.vazia():
+            return None
+        return self.items.pop(0)

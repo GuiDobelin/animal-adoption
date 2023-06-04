@@ -51,3 +51,8 @@ class Pilha:
 
     def Salva(self, item):
         self.items.append(item)
+    
+    def pop(self):
+        if self.vazia():
+            return None
+        return self.items.pop()

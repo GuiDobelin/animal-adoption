@@ -66,3 +66,7 @@ def cadastrar_animal():
     cor = input("Cor do animal: ")
     porte = input("Porte do animal: ")
     particularidade = input("Particularidade do animal: ")
+    
+    animal = Animal(tipo, idade, cor, porte, particularidade)
+    animais_cadastrados.enfileirar(animal)
+    print("Animal cadastrado com sucesso!")

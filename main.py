@@ -56,3 +56,6 @@ class Pilha:
         if self.vazia():
             return None
         return self.items.pop()
+    
+    def tamanho(self):
+        return len(self.items)

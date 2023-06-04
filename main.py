@@ -70,3 +70,9 @@ def cadastrar_animal():
     animal = Animal(tipo, idade, cor, porte, particularidade)
     animais_cadastrados.enfileirar(animal)
     print("Animal cadastrado com sucesso!")
+
+def cadastrar_pessoa():
+    nome = input("Nome da pessoa: ")
+    telefone = input("Telefone da pessoa: ")
+    especie_interesse = input("Espécie de interesse para adoção: ")
+    preferencia_animal = input("Preferência de animal: ")

@@ -59,3 +59,10 @@ class Pilha:
     
     def tamanho(self):
         return len(self.items)
+
+def cadastrar_animal():
+    tipo = input("Tipo do animal: ")
+    idade = input("Idade aproximada do animal: ")
+    cor = input("Cor do animal: ")
+    porte = input("Porte do animal: ")
+    particularidade = input("Particularidade do animal: ")

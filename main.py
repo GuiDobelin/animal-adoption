@@ -94,3 +94,8 @@ def gerar_relatorio():
 
 def pesquisar_animal():
     caracteristicas = input("Características do animal: ")
+
+    for animal in animais_cadastrados.items:
+        if caracteristicas.lower() in animal.tipo.lower():
+            print("Animal encontrado:")
+            print("Tipo:", animal.tipo)

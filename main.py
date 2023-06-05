@@ -99,3 +99,8 @@ def pesquisar_animal():
         if caracteristicas.lower() in animal.tipo.lower():
             print("Animal encontrado:")
             print("Tipo:", animal.tipo)
+            print("Idade:", animal.idade)
+            print("Cor:", animal.cor)
+            print("Porte:", animal.porte)
+            print("Particularidade:", animal.particularidade)
+            return

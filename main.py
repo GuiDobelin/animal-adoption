@@ -91,3 +91,6 @@ def gerar_relatorio():
         print("Telefone:", candidato.telefone)
         print("Preferência de animal:", candidato.preferencia_animal)
         print()
+
+def pesquisar_animal():
+    caracteristicas = input("Características do animal: ")

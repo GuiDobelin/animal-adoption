@@ -80,3 +80,7 @@ def cadastrar_pessoa():
     pessoa = Pessoa(nome, telefone, especie_interesse, preferencia_animal)
     pessoas_interessadas.append(pessoa)
     print("Pessoa cadastrada com sucesso!")
+
+def gerar_relatorio():
+    especie = input("Espécie de animal: ")
+    candidatos = [pessoa for pessoa in pessoas_interessadas if pessoa.especie_interesse == especie]

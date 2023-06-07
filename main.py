@@ -125,3 +125,7 @@ def exibir_menu():
     print("4. Pesquisar animal por características")
     print("5. Pesquisa binária em lista de animais")
     print("6. Sair")
+    
+def main():
+    global animais_cadastrados, pessoas_interessadas
+    animais_cadastrados = Fila()

@@ -121,3 +121,5 @@ def pesquisa_binaria(lista, valor, inicio, fim):
 def exibir_menu():
     print("1. Cadastrar animal")
     print("2. Cadastrar pessoa interessada")
+    print("3. Gerar relatório de candidatos para adoção")
+    print("4. Pesquisar animal por características")

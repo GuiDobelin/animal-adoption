@@ -110,3 +110,6 @@ def pesquisar_animal():
 def pesquisa_binaria(lista, valor, inicio, fim):
     if inicio > fim:
         return -1
+    meio = (inicio + fim) // 2
+    if lista[meio] == valor:
+        return meio

@@ -106,3 +106,7 @@ def pesquisar_animal():
             return
         
     print("Nenhum animal encontrado com as características informadas.")
+
+def pesquisa_binaria(lista, valor, inicio, fim):
+    if inicio > fim:
+        return -1

@@ -129,3 +129,8 @@ def exibir_menu():
 def main():
     global animais_cadastrados, pessoas_interessadas
     animais_cadastrados = Fila()
+    pessoas_interessadas = LinkedList()
+
+    while True:
+        exibir_menu()
+        opcao = input("Digite a opção desejada: ")

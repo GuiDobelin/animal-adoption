@@ -117,3 +117,7 @@ def pesquisa_binaria(lista, valor, inicio, fim):
         return pesquisa_binaria(lista, valor, meio + 1, fim)
     else:
         return pesquisa_binaria(lista, valor, inicio, meio - 1)
+    
+def exibir_menu():
+    print("1. Cadastrar animal")
+    print("2. Cadastrar pessoa interessada")

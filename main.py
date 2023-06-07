@@ -115,3 +115,5 @@ def pesquisa_binaria(lista, valor, inicio, fim):
         return meio
     elif lista[meio] < valor:
         return pesquisa_binaria(lista, valor, meio + 1, fim)
+    else:
+        return pesquisa_binaria(lista, valor, inicio, meio - 1)

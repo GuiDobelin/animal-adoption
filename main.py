@@ -123,3 +123,5 @@ def exibir_menu():
     print("2. Cadastrar pessoa interessada")
     print("3. Gerar relatório de candidatos para adoção")
     print("4. Pesquisar animal por características")
+    print("5. Pesquisa binária em lista de animais")
+    print("6. Sair")

@@ -104,3 +104,5 @@ def pesquisar_animal():
             print("Porte:", animal.porte)
             print("Particularidade:", animal.particularidade)
             return
+        
+    print("Nenhum animal encontrado com as características informadas.")

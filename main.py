@@ -137,3 +137,5 @@ def main():
         
         if opcao == "1":
             cadastrar_animal()
+        elif opcao == "2":
+            cadastrar_pessoa()

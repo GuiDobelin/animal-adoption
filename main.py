@@ -134,3 +134,6 @@ def main():
     while True:
         exibir_menu()
         opcao = input("Digite a opção desejada: ")
+        
+        if opcao == "1":
+            cadastrar_animal()

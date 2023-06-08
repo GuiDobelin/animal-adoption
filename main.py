@@ -143,3 +143,6 @@ def main():
             gerar_relatorio()
         elif opcao == "4":
             pesquisar_animal()
+        elif opcao == "5":
+            lista_animais = [animal.tipo for animal in animais_cadastrados.items]
+            lista_animais.sort()

@@ -141,3 +141,5 @@ def main():
             cadastrar_pessoa()
         elif opcao == "3":
             gerar_relatorio()
+        elif opcao == "4":
+            pesquisar_animal()

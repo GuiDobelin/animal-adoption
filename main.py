@@ -149,3 +149,5 @@ def main():
             
             valor = input("Tipo do animal a pesquisar: ")
             resultado = pesquisa_binaria(lista_animais, valor, 0, len(lista_animais) - 1)
+            if resultado != -1:
+                print("Animal encontrado:", lista_animais[resultado])

@@ -155,3 +155,5 @@ def main():
                 print("Animal não encontrado.")
         elif opcao == "6":
             break
+        else:
+            print("Opção inválida. Tente novamente.")

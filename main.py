@@ -151,3 +151,5 @@ def main():
             resultado = pesquisa_binaria(lista_animais, valor, 0, len(lista_animais) - 1)
             if resultado != -1:
                 print("Animal encontrado:", lista_animais[resultado])
+            else:
+                print("Animal não encontrado.")

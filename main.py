@@ -146,3 +146,6 @@ def main():
         elif opcao == "5":
             lista_animais = [animal.tipo for animal in animais_cadastrados.items]
             lista_animais.sort()
+            
+            valor = input("Tipo do animal a pesquisar: ")
+            resultado = pesquisa_binaria(lista_animais, valor, 0, len(lista_animais) - 1)

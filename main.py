@@ -153,3 +153,5 @@ def main():
                 print("Animal encontrado:", lista_animais[resultado])
             else:
                 print("Animal não encontrado.")
+        elif opcao == "6":
+            break

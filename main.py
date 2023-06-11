@@ -8,6 +8,7 @@ class Animal:
         
 class Pessoa:
     def __init__(self, nome, telefone, especie_interesse, preferencia_animal):
+        self.nome = nome
 
 class Node:
     def __init__(self, data):

@@ -11,7 +11,8 @@ class Pessoa:
         self.nome = nome
         self.telefone = telefone
         self.especie_interesse = especie_interesse
-
+        self.preferencia_animal = preferencia_animal
+        
 class Node:
     def __init__(self, data):
         self.data = data

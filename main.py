@@ -76,7 +76,13 @@ def cadastrar_animal():
 
 def cadastrar_pessoa():
     nome = input("Nome da pessoa: ")
-    telefone = input("Telefone da pessoa: ")
+    while True:
+        telefone = input("Telefone da pessoa: ")
+        if telefone.isdigit():
+            telefone = int(telefone)
+            break 
+        else:
+            print("Idade inválida. Por favor, digite apenas números.")
     especie_interesse = input("Espécie de interesse para adoção: ")
     preferencia_animal = input("Preferência de animal: ")
 

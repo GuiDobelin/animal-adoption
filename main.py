@@ -1,5 +1,7 @@
 from animal import *
 from pessoa import *
+
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -55,17 +57,74 @@ class Pilha:
     def tamanho(self):
         return len(self.items)
 
+def cadastrar_animal():
+    tipo = input("Tipo do animal: ")
+    while True:
+        idade = input("Idade aproximada do animal: ")
+        if idade.isdigit():
+            idade = int(idade)
+            break 
+        else:
+            print("Idade inválida. Por favor, digite apenas números.")
+    cor = input("Cor do animal: ")
+    porte = input("Porte do animal: ")
+    particularidade = input("Particularidade do animal: ")
+
+    animal = Animal(tipo, idade, cor, porte, particularidade)
+    animais_cadastrados.enfileirar(animal)
+    print("Animal cadastrado com sucesso!")
+
+def cadastrar_pessoa():
+    nome = input("Nome da pessoa: ")
+    telefone = input("Telefone da pessoa: ")
+    especie_interesse = input("Espécie de interesse para adoção: ")
+    preferencia_animal = input("Preferência de animal: ")
+
+    pessoa = Pessoa(nome, telefone, especie_interesse, preferencia_animal)
+    pessoas_interessadas.append(pessoa)
+    print("Pessoa cadastrada com sucesso!")
+
 def gerar_relatorio():
     especie = input("Espécie de animal: ")
-    candidatos = [pessoa for pessoa in pessoas_interessadas.head if pessoa == especie]
+    candidatos = []
+    current = pessoas_interessadas.head
+    while current:
+        if current.data.especie_interesse == especie:
+            candidatos.append(current.data)
+        current = current.next
+
+    if candidatos:
+        print("Candidatos para adoção da espécie", especie)
+        for candidato in candidatos:
+            print("Nome:", candidato.nome)
+            print("Telefone:", candidato.telefone)
+            print("Preferência de animal:", candidato.preferencia_animal)
+            print()
+    else:
+        print("Nenhum candidato encontrado para adoção da espécie", especie)
 
 
-    print("Candidatos para adoção da espécie", especie)
-    for candidato in candidatos:
-        print("Nome:", candidato.nome)
-        print("Telefone:", candidato.telefone)
-        print("Preferência de animal:", candidato.preferencia_animal)
-        print()
+
+def pesquisar_animal():
+    caracteristicas = input("Características do animal: ")
+
+    animais_encontrados = []
+    for animal in animais_cadastrados.items:
+        if caracteristicas.lower() in animal.tipo.lower():
+            animais_encontrados.append(animal)
+
+    if animais_encontrados:
+        print("Animais encontrados:")
+        for animal in animais_encontrados:
+            print("Tipo:", animal.tipo)
+            print("Idade:", animal.idade)
+            print("Cor:", animal.cor)
+            print("Porte:", animal.porte)
+            print("Particularidade:", animal.particularidade)
+            print()
+    else:
+        print("Nenhum animal encontrado com as características informadas.")
+
 
 def pesquisa_binaria(lista, valor, inicio, fim):
     if inicio > fim:

@@ -125,25 +125,11 @@ def pesquisar_animal():
     else:
         print("Nenhum animal encontrado com as características informadas.")
 
-
-def pesquisa_binaria(lista, valor, inicio, fim):
-    if inicio > fim:
-        return -1
-
-    meio = (inicio + fim) // 2
-    if lista[meio] == valor:
-        return meio
-    elif lista[meio] < valor:
-        return pesquisa_binaria(lista, valor, meio + 1, fim)
-    else:
-        return pesquisa_binaria(lista, valor, inicio, meio - 1)
-
 def exibir_menu():
     print("1. Cadastrar animal")
     print("2. Cadastrar pessoa interessada")
     print("3. Gerar relatório de candidatos para adoção")
     print("4. Pesquisar animal por características")
-    print("5. Pesquisa binária em lista de animais")
     print("6. Sair")
 
 def main():
@@ -164,16 +150,6 @@ def main():
         elif opcao == "4":
             pesquisar_animal()
         elif opcao == "5":
-            lista_animais = [animal.tipo for animal in animais_cadastrados.items]
-            lista_animais.sort()
-
-            valor = input("Tipo do animal a pesquisar: ")
-            resultado = pesquisa_binaria(lista_animais, valor, 0, len(lista_animais) - 1)
-            if resultado != -1:
-                print("Animal encontrado:", lista_animais[resultado])
-            else:
-                print("Animal não encontrado.")
-        elif opcao == "6":
             break
         else:
             print("Opção inválida. Tente novamente.")

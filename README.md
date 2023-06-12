@@ -1,7 +1,8 @@
 ![download](https://user-images.githubusercontent.com/87872775/228082987-ac241011-e117-49cc-ba8e-461c5577d0f8.png)
 # Sobre a Disciplina.
 Curso: Engenharia de Software 3º Período
-Aluno: Guilhrme Henrique 
+Aluno: Guilhrme Henrique <br>
+Pdf do fluxograma: [sodapdf-converted.pdf](https://github.com/GuiDobelin/animal-adoption/files/11727899/sodapdf-converted.pdf)<br>
 Disciplina: Estrutura de Dados<br>
 Professor: Marcio Garrido https://github.com/marciogarridoLaCop
 # Enuciado 
@@ -51,4 +52,15 @@ Temos a class animal.
 Temos a class pessoa.
 
 ![2023-06-12_16-23](https://github.com/GuiDobelin/animal-adoption/assets/105359316/a112cfe3-c59b-4ec5-8fcc-bba3de7ac6fc)
+
+Aqui esta a imagem do fluxograma.
+
+![2023-06-12_17-02](https://github.com/GuiDobelin/animal-adoption/assets/105359316/54121c37-a8c2-4185-8d55-053fa9927d7d)
+
+# Como executar:
+1 - Clone o repositório ou baixe o arquivo<br>
+2 - Abra o terminal e navegue até o diretório do arquivo que foi baixado.<br>
+3 - Execute o arquivo<br> 
+    
+
 

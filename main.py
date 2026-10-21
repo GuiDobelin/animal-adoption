@@ -79,10 +79,9 @@ def cadastrar_pessoa():
     while True:
         telefone = input("Telefone da pessoa: ")
         if telefone.isdigit():
-            telefone = int(telefone)
-            break 
+            break
         else:
-            print("Idade inválida. Por favor, digite apenas números.")
+            print("Telefone inválido. Por favor, digite apenas números.")
     especie_interesse = input("Espécie de interesse para adoção: ")
     preferencia_animal = input("Preferência de animal: ")
 
@@ -95,7 +94,7 @@ def gerar_relatorio():
     candidatos = []
     current = pessoas_interessadas.head
     while current:
-        if current.data.especie_interesse == especie:
+        if current.data.especie_interesse.strip().lower() == especie.strip().lower():
             candidatos.append(current.data)
         current = current.next
 
@@ -112,11 +111,12 @@ def gerar_relatorio():
 
 
 def pesquisar_animal():
-    caracteristicas = input("Características do animal: ")
+    caracteristicas = input("Características do animal: ").strip().lower()
 
     animais_encontrados = []
     for animal in animais_cadastrados.items:
-        if caracteristicas.lower() in animal.tipo.lower():
+        dados = [animal.tipo, str(animal.idade), animal.cor, animal.porte, animal.particularidade]
+        if any(caracteristicas in dado.lower() for dado in dados):
             animais_encontrados.append(animal)
 
     if animais_encontrados:
@@ -136,7 +136,7 @@ def exibir_menu():
     print("2. Cadastrar pessoa interessada")
     print("3. Gerar relatório de candidatos para adoção")
     print("4. Pesquisar animal por características")
-    print("6. Sair")
+    print("5. Sair")
 
 def main():
     global animais_cadastrados, pessoas_interessadas
